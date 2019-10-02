@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.2)
 
-project(cmake VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER})
+project(HelloWorld VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER})
 
 find_package(Threads REQUIRED)
 find_package(Boost COMPONENTS unit_test_framework REQUIRED)
@@ -13,10 +13,10 @@ add_library(helloworld lib.cpp)
 
 add_executable(test_version test_version.cpp)
 
-set_target_properties(helloworld_cli helloworld test_version PROPEPTIES
-  CXX_STANDART 17
-  CXX_STANDART_REQUIRED ON
-  COMPILE_OPTIONS "-Wpedantic;-Wall;--Wextra"
+set_target_properties(helloworld_cli helloworld test_version PROPERTIES
+    CXX_STANDARD 17
+    CXX_STANDARD_REQUIRED ON
+    COMPILE_OPTIONS "-Wpedantic;-Wall;-Wextra"
 )
 
 set_target_properties(test_version PROPERTIES
