@@ -6,6 +6,7 @@ addons:
     packages:
     - libboost-test-dev
    
+   
  script:
 - cmake .
 - cmake --build .
