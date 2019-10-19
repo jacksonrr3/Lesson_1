@@ -1,10 +1,10 @@
 #include <iostream>
 #include "lib.h"
-#include <vector>
+
 
 int main()
 {  
-  std::cout << "build " << version() << "\n";
-  std::cout << "Hello, World!\n"; 
+  std::cout << "build " << version() << std::endl;
+  std::cout << "Hello, World!" << std::endl; 
 return 0;
 }
